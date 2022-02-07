@@ -1,0 +1,55 @@
+
+ /* GRID MARCAS */ 
+
+
+  .marcas__main {
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+    width: 100%;
+    height: 100%;
+}
+
+#main__section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.section__grid1{
+    align-content: center;
+    align-items: center;
+    margin: 1.87em;
+    display: grid;
+    width: max-content;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "Marca Marca Marca"
+ "Marca Marca Marca";
+    grid-column-gap: 0.625em;
+    grid-row-gap: 0.625em;
+}
+
+
+.grid__cardMarca {
+    display: flex;
+    width: 18.75em;
+    height: 18.75em;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.26);
+    background-color: white;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid__cardMarca:hover{
+    border-color: #71a154;
+    box-shadow: 0px 0px 30px #317124;
+  }
+  .grid__cardMarca:focus{
+    border-color: #71a154;
+    box-shadow: 0px 0px 30px #317124;
+  }
+  
+
+
+

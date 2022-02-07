@@ -1,0 +1,90 @@
+.promociones{
+    background-image:rgb(245, 245, 245);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+    }
+    
+    .promociones__row{ 
+      align-content: center;
+      align-items: center;
+      margin: 1.25em;
+      background: #f5f5f5;
+      display: grid;
+      width: max-content;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-column-gap: 0.43em;
+      grid-row-gap: 0.43em;
+    }
+    
+    .uno {
+    grid-area: article1;
+    }
+    
+    .dos {
+    grid-area: article2;
+    }
+    
+    .tres {
+    grid-area: article;
+    }
+    
+    .cuatro {
+    grid-area: article;
+    }
+    
+    .cinco {
+    grid-area: article;
+    }
+    
+    .seis {
+    grid-area: article;
+    }
+    
+    .siete {
+    grid-area: article;
+    }
+    
+    .ocho {
+    grid-area: article;
+    }
+    
+    .nueve {
+    grid-area: article;
+    }
+    
+    .diez {
+    grid-area: article;
+    }
+    
+    .once {
+    grid-area: article;
+    }
+    .doce{
+    
+      grid-area: article;
+    
+    }
+    
+    .promociones__tarjeta{
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.26);
+    background-color: #fff;
+    /*padding: 1.45em;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.1s;
+    width: 18.75em;
+    height: 21.87em;
+    border-radius: 4px;
+    }
+    
+
+    .promo__p{
+        text-align: center;
+        font-size: 30px;
+    
+    }
+    

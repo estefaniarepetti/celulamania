@@ -1,0 +1,123 @@
+.articulo__main {
+    grid-area: main;
+    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+    width: 100%;
+    height: 100%;
+    padding: 3.125em;
+}
+
+.main__section {
+    display: flex;
+    justify-content: center;
+}
+
+
+.section__grid2 {
+    padding: 3.125em;
+    background-color: white;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.26);
+    border-radius: 5px;
+    align-items: center;
+    display: grid;
+    grid-template-columns: max-content max-content max-content;
+    grid-template-areas: "subImg princImg datos";
+}
+
+
+/* Imagenes */ 
+
+    .grid__imgPrincipal {
+    display: flex;
+    grid-area: princImg;
+    justify-content: space-between;
+    padding: 1.25em;
+    width: 23.12rem;
+    align-content: center;
+}
+
+
+.grid__imgSecundarias {
+    padding: 1.25em;
+    grid-area: subImg;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid #dedede;
+}
+
+
+
+.imgSecundarias__secundaria {
+    height: 6.8em;
+    width: 6.8em;
+    transition: all 0.2s;
+}
+
+
+/* datos */
+.grid__datos {
+    padding: 1.25em;
+    grid-area: datos;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 33.12em;
+    grid-template-rows: max-content max-content max-content max-content max-content max-content;
+    grid-template-areas: "nombre"
+ "precio"
+ "favorito"
+ "descripcion"
+ "selectores"
+ "botones";
+    row-gap: 13px;
+}
+
+.grid__datos h2 {
+    font-size: 1.87em;
+    flex-wrap: wrap;
+}
+
+.datos__precio {
+    font-weight: bold;
+    grid-area: precio;
+}
+
+
+ .datos__descripcion {
+    width: 33rem;
+    font-size: 13px;
+    text-align: justify;
+    color: #2e2e2e;
+    grid-area: descripcion;
+}
+
+
+.datos__selects {
+    display: flex;
+    font-size: 1.062em;
+    grid-area: selectores;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 0.93rem;
+    border-top: 1px solid #dedede;
+}
+
+label {
+    display: inline-block;
+}
+
+.form-select {
+    width: max-content;
+}
+
+
+    .datos__inputs {
+    grid-area: botones;
+    display: flex;
+    width: 100%;
+}
+
+.button__cart {
+    width: 1em;
+}

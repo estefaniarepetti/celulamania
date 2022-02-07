@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="celular, celulares, venta de celulares, iphone, motorola, samsguns, xiaomi">
+  <meta name="keywords" content="celular, celulares, venta de celulares, iphone, motorola">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="imagenes/logo8.png" />
+  <title>Celumania</title>
+
+</head>
+
+<body>
+  <header>
+    <!--Inicio NAV -->
+
+    <nav>
+
+      <ul class="nav__lista">
+        <li class="nav__item">
+          <a href="index.html">
+            <img src="imagenes/logo8.png" class="nav__icono" alt="icono inicio">
+          </a>
+        </li>
+        <li class="nav__item">
+          <input type="text" id="buscadorIndex" name="Buscador" onchange="filtros()" placeholder="Buscar"
+            class="nav__buscador">
+        </li>
+        <li class="nav__item">
+          <a href="cuerpo/celulares.html">
+            <p>Marcas</p>
+          </a>
+        </li>
+
+        <li class="nav__item">
+
+          <a href="cuerpo/accesorios.html">
+            <p>Accesorios</p>
+          </a>
+
+        <li class="nav__item">
+
+          <a href="cuerpo/faq.html">
+            <p>FAQ </p>
+          </a>
+
+        </li>
+        <li class="nav__item">
+
+          <a href="cuerpo/nosotros.html">
+            <p>Contactanos </p>
+          </a>
+        </li>
+
+        <ul>
+          <li class="submenu">
+            <img
+              src="data:image/png;base64,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"
+              width="30" id="img-carrito">
+            <div id="carrito">
+              <table id="lista-carrito" class="u-full-width">
+                <thead>
+                  <tr>
+                    <th>Imagen</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+              <br>
+            
+              <div class="vaciar">
+                <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+              </div>
+              <br>
+              <div class="totalCarrito">
+
+                <a class="text-right" class="button u-full-width">Total: $<span id="precioTotal">0.0</span></a>
+              </div>
+
+            </div>
+          </li>
+        </ul>
+        </div>
+        </div>
+        </div>
+
+      </ul>
+    </nav>
+
+
+
+  </header>
+
+  <!--- Inicio Carrusel--->
+
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="imagenes/carrusel2.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="imagenes/carrusel4.png" class="d-block w-100" alt="...">
+      </div>
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+
+
+  <div id="lista-celus">
+    <div class="row">
+
+    </div>
+
+  </div>
+
+
+  <!-- Footer-->
+  <footer class="footer">
+
+    <div class="footer__centro">
+      <ul class="centro__lista">
+        <li><strong>CELUMANIA</strong> </li>
+        <li><span>2021</span></li>
+        <li><small>Todos los derechos reservados</small></li>
+      </ul>
+    </div>
+
+    <div class="footer__derecha">
+      <ul class="derecha__lista">
+        <li class="lista__item">
+          <a href="">
+            <label for="iconContacto1"><img id="iconContacto1" class="iconContacto" src="" alt=""> Contacto </label>
+          </a>
+        </li>
+        <li class="lista__item">
+          <a href="">
+            <label for="iconContacto2"><img id="iconContacto2" class="iconContacto" src="" alt=""> 0000-0000 </label>
+          </a>
+        </li>
+        <li class="lista__item">
+          <a href="">
+            <label for="iconContacto3"><img id="iconContacto3" class="iconContacto" src="" alt=""> 11 0000-0000 </label>
+          </a>
+        </li>
+        <li class="lista__item">
+          <a href="">
+            <label for="iconContacto4"><img id="iconContacto4" class="iconContacto" src="" alt=""> Email:
+              info@celumania.com.ar </label>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </footer>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+  </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="./codigo.js"></script>
+  <script src="https://kit.fontawesome.com/403546b4d7.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
