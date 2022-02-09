@@ -13,7 +13,7 @@
 
 
 .section__grid2 {
-    padding: 3.125em;
+   /* padding: 3.125em;*/
     background-color: white;
     box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.26);
     border-radius: 5px;
@@ -49,9 +49,10 @@
 
 
 .imgSecundarias__secundaria {
-    height: 6.8em;
-    width: 6.8em;
+    height: 19rem;
+    width: 19rem;
     transition: all 0.2s;
+    object-fit: cover;
 }
 
 
@@ -120,4 +121,14 @@ label {
 
 .button__cart {
     width: 1em;
+}
+
+.btn-outline-light{
+    color:#000;
+    border-color:#000;
+    margin-left: 30px
+}
+
+.button__heart{
+    color:#000;
 }

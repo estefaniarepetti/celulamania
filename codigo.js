@@ -30,10 +30,10 @@ const productos = [{
 
 {
     id: 5,
-    nombre: "Xiaomi",
+    nombre: "One plus 100",
     precio: "$100.000",
     cuotas: "6 cuotas sin interes",
-    imagen: "/imagenes/celular1.png" 
+    imagen: "/imagenes/oneplus101.png" 
 },
 
 {
@@ -99,7 +99,7 @@ for (const producto of productos) {
         <img src="${producto.imagen}"class="imagen-curso u-full-width">
       </a>
         <div class="info-card">
-            <h4>Iphone X</h4>
+            <h4>${producto.nombre} X</h4>
             <p class="cuotas">${producto.cuotas}</p>
             <p class="precio"> ${producto.precio}</p>
             <a href="" class="u-full-width button-primary button input agregar-carrito" data-id="2">Agregar Al Carrito</a>

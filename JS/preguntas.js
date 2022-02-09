@@ -4,45 +4,50 @@ const productos = [{
     precio: "$132.000",
     cuotas: "6 cuotas sin interes",
     imagen: "/imagenes/iphoneX.png",
-    direccion: "../celulares/samsung.html"
+    direccion: "../celulares/iphone12.html"
 },
 {
     id: 2,  
-    nombre: "Galaxy Z Fold3 5G Negro",
+    nombre: "Samsung Galaxy Z Fold3 5G Negro",
     precio: "$254.999",
     cuotas: "6 cuotas sin interes",
-    imagen: "/imagenes/galaxyZ.png" 
+    imagen: "/imagenes/galaxyZ.png",
+    direccion: "../celulares/samsuggalaxy.html"
 },
 {
     id: 3,
     nombre: "Motorola Moto E7i Power - Azul",
-    precio: "$99.000,0",
+    precio: "$21.999",
     cuotas: "6 cuotas sin interes",
-    imagen: "/imagenes/celular3.png" 
+    imagen: "/imagenes/celular3.png",
+    direccion: "../celulares/motorola.html"
 },
 {
     id: 4,
     nombre: "Xiaomi Note 10",
     precio: "$62.999",
     cuotas: "6 cuotas sin interes",
-    imagen: "/imagenes/celular5.png" 
+    imagen: "/imagenes/celular5.png",
+    direccion: "../celulares/xioaminote.html"
 },
 
 {
     id: 5,
-    nombre: "Xiaomi",
-    precio: "$100.000",
+    nombre: "Samsung A52",
+    precio: "$64.999",
     cuotas: "6 cuotas sin interes",
-    imagen: "/imagenes/celular1.png",
+    imagen: "/imagenes/samsunga52.png",
+    direccion: "../celulares/samsunga52.html"
 
 },
 
 {
     id: 6,
-    nombre: "Iphone 12",
-    precio: "$120.999",
+    nombre: "One Plus Nord100",
+    precio: "$59.850",
     cuotas: "6 cuotas sin interes",
-    imagen: "/imagenes/celular7.png" 
+    imagen: "/imagenes/oneplus100.png",
+    direccion: "../celulares/oneplus.html"
 },
 
 
