@@ -63,9 +63,9 @@ for (const producto of productos) {
         <img src="${producto.imagen}"class="imagen-curso u-full-width">
       </a>
         <div class="info-card">
-        <p class="precio"> ${producto.precio}</p>
+        <p class="precio1"> ${producto.precio}</p>
         <h4> <a href="${producto.direccion}">${producto.nombre} </a></h4>
-            <p class="cuotas">${producto.cuotas}</p>
+            <p class="cuotas1">${producto.cuotas}</p>
         
            
         </div>

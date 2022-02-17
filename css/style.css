@@ -557,6 +557,14 @@ button:hover {
 .green {
   color: green; }
 
+.promo__p {
+  color: #0e0e2c;
+  text-align: center;
+  font-family: Roboto-Light,sans-serif;
+  font-size: 32px;
+  line-height: 40px;
+  padding: .5px 0; }
+
 .productos {
   /*background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
     width: 100%;
