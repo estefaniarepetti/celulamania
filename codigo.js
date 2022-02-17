@@ -1,45 +1,47 @@
 
+/*
+
 const productos = [{
     id: 1,
     nombre: "Iphone X",
-    precio: "$125.000",
+    precio: "125.000",
     cuotas: "6 cuotas sin interes",
     imagen: "/imagenes/celular2.png"
 },
 {
     id: 2,
     nombre: "Samsung S21",
-    precio: "$95.000",
+    precio: "95.000",
     cuotas: "6 cuotas sin interes",
     imagen: "/imagenes/celular3.png" 
 },
 {
     id: 3,
     nombre: "Motorola Moto E7i Power - Azul",
-    precio: "$99.000,0",
+    precio: "99.000",
     cuotas: "6 cuotas sin interes",
     imagen: "/imagenes/celular4.png" 
 },
 {
     id: 4,
     nombre: "6 Cuotas sin interes",
-    precio: "$100.000",
+    precio: "100.000",
     cuotas: "6 cuotas sin interes",
     imagen: "/imagenes/celular5.png" 
 },
 
 {
     id: 5,
-    nombre: "One plus 100",
-    precio: "$100.000",
+    nombre: "Xiaomi",
+    precio: "100.000",
     cuotas: "6 cuotas sin interes",
-    imagen: "/imagenes/oneplus101.png" 
+    imagen: "/imagenes/celular1.png" 
 },
 
 {
     id: 6,
     nombre: "Iphone 12",
-    precio: "$120.999",
+    precio: "120.999",
     cuotas: "6 cuotas sin interes",
     imagen: "/imagenes/celular7.png" 
 },
@@ -47,42 +49,42 @@ const productos = [{
 {
     id: 7,
     nombre: "Xiaomi Redmi Note 10S",
-    precio: "$62.999",
+    precio: "62.999",
     cuotas: "6 cuotas sin interes",
     imagen: "/imagenes/celular6.png" 
 },
 {
     id: 8,
     nombre: "Xiaomi Poco X3 PRO 128 GB Azul",
-    precio: "$82.077",
+    precio: "82.077",
     cuotas: "6 cuotas sin interes",
     imagen: "/imagenes/celular1.png" 
 },
 {
     id: 9,
     nombre: "Iphone SE (128GB)",
-    precio: "$99.999",
+    precio: "99.999",
     cuotas: "6 cuotas sin interes",
     imagen: "/imagenes/celular3.png"
 },
 {
     id: 10,
     nombre: "Iphone SE (128GB)",
-    precio: "$99.999",
+    precio: "99.999",
     cuotas: "6 cuotas sin interes",
     imagen:"/imagenes/celular7.png" 
 },
 {
     id: 11,
     nombre: "Iphone SE (128GB)",
-    precio: "$99.999",
+    precio: "99.999",
     cuotas: "6 cuotas sin interes",
     imagen: "/imagenes/celular3.png"
 },
 {
     id: 12,
     nombre: "Iphone SE (128GB)",
-    precio: "$99.999",
+    precio: "99.999",
     cuotas: "6 cuotas sin interes",
     imagen: "/imagenes/celular2.png"
 }
@@ -99,9 +101,9 @@ for (const producto of productos) {
         <img src="${producto.imagen}"class="imagen-curso u-full-width">
       </a>
         <div class="info-card">
-            <h4>${producto.nombre} X</h4>
+            <h4>Iphone X</h4>
             <p class="cuotas">${producto.cuotas}</p>
-            <p class="precio"> ${producto.precio}</p>
+            <p class="precio" >$ ${producto.precio}</p>
             <a href="" class="u-full-width button-primary button input agregar-carrito" data-id="2">Agregar Al Carrito</a>
         </div>
         </div>
@@ -146,7 +148,7 @@ $(".precio").css({
     "color":"0e0e2c",
 })
 
-/* carrito 3 */
+/* carrito 3 
 
 const carrito = document.getElementById('carrito');
 const cursos = document.getElementById('lista-celus');
@@ -209,6 +211,8 @@ function insertarCurso(curso) {
             
     `;
     listaCursos.appendChild(row);
+    $("#precioTotal").html("");
+    $("#precioTotal").html(precioTotal);
     guardarCursoLocalStorage(curso);
 
 }
@@ -244,17 +248,18 @@ function vaciarcarrito()
 }
 
 
-/*
-function precioTotal(precio, id) {
+
+function precioTotal() {
   
-    // Sumar subtotales
-    let precios = $(`.precio${id}`).val();
-    let subtotal = precio + precio;
-    precios[id] = subtotal;
-    let total = precios.reduce((a, b) => Number(a) + Number(b), 0);
-    $("#precioTotal").html(total);
+    let resultado = 0 ;
+    let datosLocalStorage = obtenerCursosLocalStorage ();
+    resultado = datosLocalStorage.reduce((x, currentValue) => x.precio + currentValue , 0 );
+    return resultado;
+
 }
-*/
+
+
+
 
 
 
@@ -323,4 +328,153 @@ function eliminarCursoLS(curso)
 //eliminar todos los cursos del LS
 function vaciarLs() {
     localStorage.clear();
+}
+
+/*
+
+function updateShoppingCartTotal() {
+    let total = 0;
+    const shoppingCartTotal = document.querySelector('.precioTotal');
+  
+    shoppingCartItems.forEach((shoppingCartItem) => {
+      const shoppingCartItemPriceElement = shoppingCartItem.querySelector(
+        '.shoppingCartItemPrice'
+      );
+      const shoppingCartItemPrice = Number(
+        shoppingCartItemPriceElement.textContent.replace('$', '')
+      );
+     
+      const shoppingCartItemQuantity = Number(
+        shoppingCartItemQuantityElement.value
+      );
+      total = total + shoppingCartItemPrice * shoppingCartItemQuantity;
+    });
+    shoppingCartTotal.innerHTML = `${total.toFixed(2)}$`;
+  } 
+
+  */
+
+
+
+  /* CARRITO NUEVO */
+
+
+
+  const addToShoppingCartButtons = document.querySelectorAll('.addToCart');
+addToShoppingCartButtons.forEach((addToCartButton) => {
+  addToCartButton.addEventListener('click', addToCartClicked);
+});
+
+const comprarButton = document.querySelector('.comprarButton');
+comprarButton.addEventListener('click', comprarButtonClicked);
+
+const shoppingCartItemsContainer = document.querySelector(
+  '.shoppingCartItemsContainer'
+);
+
+function addToCartClicked(event) {
+  const button = event.target;
+  const item = button.closest('.item');
+
+  const itemTitle = item.querySelector('.item-title').textContent;
+  const itemPrice = item.querySelector('.item-price').textContent;
+  const itemImage = item.querySelector('.item-image').src;
+
+  addItemToShoppingCart(itemTitle, itemPrice, itemImage);
+}
+
+function addItemToShoppingCart(itemTitle, itemPrice, itemImage) {
+  const elementsTitle = shoppingCartItemsContainer.getElementsByClassName(
+    'shoppingCartItemTitle'
+  );
+  for (let i = 0; i < elementsTitle.length; i++) {
+    if (elementsTitle[i].innerText === itemTitle) {
+      let elementQuantity = elementsTitle[
+        i
+      ].parentElement.parentElement.parentElement.querySelector(
+        '.shoppingCartItemQuantity'
+      );
+      elementQuantity.value++;
+      $('.toast').toast('show');
+      updateShoppingCartTotal();
+      return;
+    }
+  }
+
+  const shoppingCartRow = document.createElement('div');
+  const shoppingCartContent = `
+  <div class="row shoppingCartItem">
+        <div class="col-6">
+            <div class="shopping-cart-item d-flex align-items-center h-100 border-bottom pb-2 pt-3">
+                <img src=${itemImage} class="shopping-cart-image">
+                <h6 class="shopping-cart-item-title shoppingCartItemTitle text-truncate ml-3 mb-0">${itemTitle}</h6>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="shopping-cart-price d-flex align-items-center h-100 border-bottom pb-2 pt-3">
+                <p class="item-price mb-0 shoppingCartItemPrice">${itemPrice}</p>
+            </div>
+        </div>
+        <div class="col-4">
+            <div
+                class="shopping-cart-quantity d-flex justify-content-between align-items-center h-100 border-bottom pb-2 pt-3">
+                <input class="shopping-cart-quantity-input shoppingCartItemQuantity" type="number"
+                    value="1">
+                <button class="btn btn-danger buttonDelete" type="button">X</button>
+            </div>
+        </div>
+    </div>`;
+  shoppingCartRow.innerHTML = shoppingCartContent;
+  shoppingCartItemsContainer.append(shoppingCartRow);
+
+  shoppingCartRow
+    .querySelector('.buttonDelete')
+    .addEventListener('click', removeShoppingCartItem);
+
+  shoppingCartRow
+    .querySelector('.shoppingCartItemQuantity')
+    .addEventListener('change', quantityChanged);
+
+  updateShoppingCartTotal();
+}
+
+function updateShoppingCartTotal() {
+  let total = 0;
+  const shoppingCartTotal = document.querySelector('.shoppingCartTotal');
+
+  const shoppingCartItems = document.querySelectorAll('.shoppingCartItem');
+
+  shoppingCartItems.forEach((shoppingCartItem) => {
+    const shoppingCartItemPriceElement = shoppingCartItem.querySelector(
+      '.shoppingCartItemPrice'
+    );
+    const shoppingCartItemPrice = Number(
+      shoppingCartItemPriceElement.textContent.replace('$', '')
+    );
+    const shoppingCartItemQuantityElement = shoppingCartItem.querySelector(
+      '.shoppingCartItemQuantity'
+    );
+    const shoppingCartItemQuantity = Number(
+      shoppingCartItemQuantityElement.value
+    );
+    total = total + shoppingCartItemPrice * shoppingCartItemQuantity;
+  });
+  shoppingCartTotal.innerHTML = `${total.toFixed(2)}`;
+}
+
+function removeShoppingCartItem(event) {
+  const buttonClicked = event.target;
+  buttonClicked.closest('.shoppingCartItem').remove();
+  updateShoppingCartTotal();
+}
+
+function quantityChanged(event) {
+  const input = event.target;
+  input.value <= 0 ? (input.value = 1) : null;
+  updateShoppingCartTotal();
+}
+
+function comprarButtonClicked() {
+  shoppingCartItemsContainer.innerHTML = '';
+  updateShoppingCartTotal();
 }

@@ -98,3 +98,4 @@ $(".accesorios__imagen").css({
     "margin": "1rem 0" ,
 
 });
+
