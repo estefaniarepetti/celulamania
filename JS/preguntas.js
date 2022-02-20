@@ -3,7 +3,7 @@ const productos = [{
     nombre: "Iphone 12",
     precio: "$132.000",
     cuotas: "6 cuotas sin interes",
-    imagen: "/imagenes/iphoneX.png",
+    imagen: "/imagenes/phone.png",
     direccion: "../celulares/iphone12.html"
 },
 {
@@ -36,7 +36,7 @@ const productos = [{
     nombre: "Samsung A52",
     precio: "$64.999",
     cuotas: "6 cuotas sin interes",
-    imagen: "/imagenes/samsunga52.png",
+    imagen: "/imagenes/phone2.png",
     direccion: "../celulares/samsunga52.html"
 
 },
@@ -46,14 +46,14 @@ const productos = [{
     nombre: "One Plus Nord100",
     precio: "$59.850",
     cuotas: "6 cuotas sin interes",
-    imagen: "/imagenes/oneplus100.png",
+    imagen: "/imagenes/phone3.png",
     direccion: "../celulares/oneplus.html"
 },
 
 
 ];
 
-
+    
 // Recorremos el array con for..of
 for (const producto of productos) {
 
