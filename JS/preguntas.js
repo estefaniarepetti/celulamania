@@ -8,7 +8,7 @@ const productos = [{
 },
 {
     id: 2,  
-    nombre: "Samsung Galaxy Z Fold3 5G Negro",
+    nombre: "Samsung Galaxy Z Fold3",
     precio: "$254.999",
     cuotas: "6 cuotas sin interes",
     imagen: "/imagenes/galaxyZ.png",
@@ -16,7 +16,7 @@ const productos = [{
 },
 {
     id: 3,
-    nombre: "Motorola Moto E7i Power - Azul",
+    nombre: "Motorola Moto E7i Power",
     precio: "$21.999",
     cuotas: "6 cuotas sin interes",
     imagen: "/imagenes/celular3.png",

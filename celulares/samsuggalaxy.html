@@ -1,104 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <title>Celumania</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <title>Celumania</title>
 
 <body>
 
-<header> 
-  <!--Inicio NAV -->
-  <nav>
+  <header>
+    <!--Inicio NAV -->
+    <nav>
 
-    <ul class="nav__lista">
-      <li class="nav__item">
+      <ul class="nav__lista">
+        <li class="nav__item">
           <a href="../index.html">
-              <img src="../imagenes/logo8.png" class="nav__icono" alt="icono inicio"> 
+            <img src="../imagenes/logo8.png" class="nav__icono" alt="icono inicio">
           </a>
-      </li>
-    
-      <li class="nav__item">
-          <a href="../cuerpo/celulares.html"><p>Marcas</p></a>
-      </li>
-      
-      <li class="nav__item">
-           
-       <a href="../cuerpo/accesorios.html"><p>Accesorios</p></a>
-        
-      <li class="nav__item">
-    
-          <a href="../cuerpo/faq.html"> <p>FAQ </p> </a>
-        
-      </li>
-      <li class="nav__item">
-        
+        </li>
+
+        <li class="nav__item">
+          <a href="../cuerpo/celulares.html">
+            <p>Marcas</p>
+          </a>
+        </li>
+
+        <li class="nav__item">
+
+          <a href="../cuerpo/accesorios.html">
+            <p>Accesorios</p>
+          </a>
+
+        <li class="nav__item">
+
+          <a href="../cuerpo/faq.html">
+            <p>FAQ </p>
+          </a>
+
+        </li>
+        <li class="nav__item">
+
           <a href="../cuerpo/nosotros.html">
             <p>Contactanos </p>
           </a>
-      </li>
-  </ul>
-  </nav>
-  
+        </li>
+      </ul>
+
+
+
 
   </header>
-    </header>
 
-    <main class="articulo__main">
-        <section class="main__section"> 
-            <div class="section__grid2">
-                <div class="grid__imgSecundarias">
-                    <img src="../imagenes/galaxyZ.png" class="imgSecundarias__secundaria" alt="Samsung S21">
-            
-                </div>
 
-                
-                
-                <div class="grid__datos">
-                    <h2>Galaxy Z Fold3 5G Negro</h2>
+  <main class="articulo__main">
+    <section class="main__section">
+      <div class="section__grid2">
+        <div class="grid__imgSecundarias">
+          <img src="../imagenes/galaxyZ.png" class="imgSecundarias__secundaria" alt="Samsung S21">
 
-                    <p class="datos__precio">$254.999</p>
+        </div>
 
-                    <div class="datos__button">
-                        <button type="button" class="btn btn-outline-light"> <i class="fas fa-heart" id="button__heart" alt="icono favoritos"> Agregar a favoritos </i></button>
-                    </div>
+        <div class="grid__datos">
+          <h2>Galaxy Z Fold3 5G Negro</h2>
+          <p class="datos__precio">$254.999</p>
 
-                    <div class="datos__descripcion">
-                        <p>Pantalla plegable con una extensión total de "7.6" 
-                          y resolución de 1768px x 2208px.
-                        </p>
-                    </div>
-                    
-                    <div class="datos__selects">
-                        <label for="talle">Color:</label>
-                        <select name="talle" id="talle" class="form-select">
-                            <option value="B">Blanco</option>
-                            <option value="N">Negro</option>
-                            <option value="A">Azul</option>
-                        </select>
-                    
-                        <label for="cantidad">Cantidad:</label>
-                        <select name="cantidad" id="cantidad" class="form-select">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                    </div>
+          <div class="datos__descripcion">
+            <p>Pantalla plegable con una extensión total de "7.6"
+              y resolución de 1768px x 2208px.
+            </p>
+          </div>
 
-                    <div class="datos__inputs">
-                        <button type="button" class="btn btn-outline-success">Comprar</button>
-                        <button type="button" class="btn btn-outline-light"> <i class="fas fa-shopping-cart"  class="button__cart" onclick="agregarAlCarrito();" alt="icono carrito"> Agregar al carrito </i></button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+          <div class="datos__selects">
+            <label for="talle">Color:</label>
+            <select name="talle" id="talle" class="form-select">
+              <option value="B">Blanco</option>
+              <option value="N">Negro</option>
+              <option value="A">Azul</option>
+            </select>
+
+            <label for="cantidad">Cantidad:</label>
+            <select name="cantidad" id="cantidad" class="form-select">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+
+          <div class="datos__inputs">
+            <button type="button" class="btn btn-outline-success"> <a href=""> Comprar </a> </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
 
 
@@ -106,22 +107,18 @@
 
   <main class="carrito__main">
     <section class="main__section">
-        <div id="carrito-section__grid" class="section__grid">
+      <div id="carrito-section__grid" class="section__grid">
 
-            <!-- ACÁ SE IMPRIMEN LAS CARDS -->
+        <!-- ACÁ SE IMPRIMEN LAS CARDS -->
 
-        </div>
-        <div id="carrito-comprar" class="grid__submit">
-            <div class="submit__card">
-                <p class="submit__total">Total: $<span id="precioTotal">0.0</span></p>
-                <button type="button" id="buybutton" onclick="comprar()" class="btn btn-outline-success">Comprar</button>
-            </div>
-        </div>
+      </div>
+
+
     </section>
-</main>
+  </main>
 
 
-     <!-- Footer-->
+  <!-- Footer-->
   <footer class="footer">
 
     <div class="footer__centro">
@@ -161,7 +158,8 @@
   </footer>
 
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="../JS/promos.js"></script>
   <script src="https://kit.fontawesome.com/403546b4d7.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

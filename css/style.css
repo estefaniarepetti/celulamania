@@ -374,6 +374,19 @@ footer a {
   border-color: #71a154;
   box-shadow: 0px 0px 30px #317124; }
 
+@media (min-width: 540px) {
+  .section__grid1 {
+    align-content: center;
+    align-items: center;
+    margin: 1.87em;
+    /* display: grid; */
+    width: max-content;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "Marca Marca Marca" "Marca Marca Marca";
+    grid-column-gap: 0.625em;
+    grid-row-gap: 0.625em; } }
+
 /* FORMULARIO */
 /* Fonts Form Google Font ::- https://fonts.google.com/  -:: */
 /* End Fonts */
@@ -423,7 +436,8 @@ opacity: .95;
   justify-content: space-around;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin: 0 auto; }
+  margin: 0 auto;
+  margin-left: 5rem; }
 
 /* the header form form */
 header {
@@ -876,3 +890,12 @@ label {
   text-align: center;
   font-size: 160px;
   color: red; }
+
+.precio1 {
+  font-family: Roboto-Regular,sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: left;
+  color: #0e0e2c;
+  margin: 0;
+  text-align: center; }

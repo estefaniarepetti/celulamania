@@ -1,37 +1,18 @@
-var carrito = JSON.parse(localStorage.getItem("carrito"));
-
-if (carrito == null) {
-    carrito = [];
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-}
-
-console.log("carrito:");
-console.log(carrito);
-
-const precios = [];
-
-
-
 //Productos// 
 
 const productos = [{
     id: "1",
-    nombre:"Iphone X",
+    nombre: "Iphone X",
     precio: "$125.000",
     cuotas: "6 cuotas sin interes",
     img: "../imagenes/celular2.png"
-},
-]
+}, ]
 
-// IMPRIME CARDS DEL PRODUCTO EN EL CARRITO
-
-function imprimirCardsCarrito() {
-
-    $("#section__grid2").html(``);
+// Recorro For y creo divs//
 
     for (let producto of productos) {
 
-        $("#section__grid2").append( `
+    $("#section__grid2").append(`
            
         <div class="grid__imgSecundarias">
         <img src="${producto.img}" class="imgSecundarias__secundaria" alt="Samsung S21">
@@ -69,8 +50,6 @@ function imprimirCardsCarrito() {
             </select>
         </div>
 
-
-
         <div class="cardArticulo__subtotal">
             <p id="subtotal${producto.id}" class="shoppingCartTItem"><b>Total:</b> $${producto.precio}</p>
         </div>
@@ -79,91 +58,17 @@ function imprimirCardsCarrito() {
         </div>
         </div>`);
 
-        precioTotal(producto.precio, producto.id);
     }
 
-    if(carrito.length == 0){
+    if (carrito.length == 0) {
 
         // Borra boton de comprar
         $("#carrito-comprar").html(``);
 
         // Imprime mensaje
         $("#carrito-section__grid").html(
-        `<div class="carrito__vacio">
+            `<div class="carrito__vacio">
         <p><b>NO TIENES PRODUCTOS EN EL CARRITO.</b></p>
         </div>`);
     }
-} 
 
-
-// AGREGAR PRODUCTO AL CARRITO
-
-function agregarAlCarrito(id) {
-
-    SAAgregarCarrito();
-
-    console.log("carrito:");
-    console.log(carrito);
-
-    $(`#${id}`).fadeOut("normal");
-    const productFoundBDD = BDD.find(producto => producto.id === id);
-
-    // Verifica si el producto ya está en el carrito
-    const productFoundCart = carrito.find(producto => producto.id === id);
-
-    // Verifica que el producto existe, y si el producto no se encuentra en él.
-    if (productFoundBDD != undefined && productFoundCart == null) {
-
-        carrito.push(productFoundBDD);
-        guardarCarrito();
-    }
-}
-
-
-// QUITAR PRODUCTO DEL CARRITO
-
-function quitarDelCarrito(id) {
-
-    SAQuitarCarrito();
-
-    carrito = carrito.filter(producto => producto.id !== id);
-    $(`#producto${id}`).slideUp(250, () =>{
-
-        imprimirCardsCarrito();
-    });
-
-    guardarCarrito();
-
-    console.log("carrito:");
-    console.log(carrito);
-
-    // Actualizar precio total
-    precios[id] = 0;
-    let total = precios.reduce((a, b) => Number(a) + Number(b), 0);
-    $("#precioTotal").html(total)
-
-}
-
-
-// GUARDAR CARRITO EN LOCAL STORAGE
-
-function guardarCarrito() {
-
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-}
-
-
-// CALCULAR PRECIO TOTAL
-
-function precioTotal(precio, id) {
-
-    // Subtotales
-    let cantidad = $(`#cantidad${id}`).val();
-    let subtotal = cantidad * precio;
-    $(`#subtotal${id}`).html(`<b>Subtotal:</b> $` + subtotal);
-
-    // Sumar subtotales
-    precios[id] = subtotal;
-    let total = precios.reduce((a, b) => Number(a) + Number(b), 0);
-    $("#precioTotal").html(total);
-}
