@@ -1,5 +1,5 @@
-//Productos //
-/*
+//Productos//
+/* 
 
 const productos2 = [{
     id: 1,
@@ -57,3 +57,5 @@ const productos2 = [{
         </div>`);
 
     }
+
+    */
