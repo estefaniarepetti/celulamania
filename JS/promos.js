@@ -1,18 +1,21 @@
-//Productos// 
+//Productos //
+/*
 
-const productos = [{
-    id: "1",
+const productos2 = [{
+    id: 1,
     nombre: "Iphone X",
     precio: "$125.000",
     cuotas: "6 cuotas sin interes",
+    detalle: "Pantalla plegable con una extensión total de 7.6 y resolución de 1768px x 2208px.",
     img: "../imagenes/celular2.png"
-}, ]
+}
+ 
 
 // Recorro For y creo divs//
 
-    for (let producto of productos) {
+    for (let producto of productos2) {
 
-    $("#section__grid2").append(`
+    $(".section__grid2").append(`
            
         <div class="grid__imgSecundarias">
         <img src="${producto.img}" class="imgSecundarias__secundaria" alt="Samsung S21">
@@ -22,14 +25,8 @@ const productos = [{
 
         <p class="datos__precio">${producto.precio}</p>
 
-        <div class="datos__button">
-            <button type="button" class="btn btn-outline-light"> <i class="fas fa-heart" id="button__heart" alt="icono favoritos"> Agregar a favoritos </i></button>
-        </div>
-
         <div class="datos__descripcion">
-            <p>Pantalla plegable con una extensión total de "7.6" 
-              y resolución de 1768px x 2208px.
-            </p>
+            <p> ${producto.detalle}</p>
         </div>
         
         <div class="datos__selects">
@@ -49,26 +46,14 @@ const productos = [{
                 <option value="5">5</option>
             </select>
         </div>
+        <div class="datos__inputs">
+        <button type="button" class="btn btn-outline-success">Comprar</button>
+     
+            <div class="datos__button">
+            <button type="button" class="btn btn-outline-light" id="modelos"> Ver otros modelos </button>
+        </div>
+            </div>
 
-        <div class="cardArticulo__subtotal">
-            <p id="subtotal${producto.id}" class="shoppingCartTItem"><b>Total:</b> $${producto.precio}</p>
-        </div>
-        <div class="cardArticulo__cancel">
-            <button type="button" class="shoppingCartTItem" onclick="quitarDelCarrito('${producto.id}')">Eliminar <img src="../Multimedia/iconos/times-solid.svg" class="cardArticulo__icono" alt="icono cruz"></button>
-        </div>
         </div>`);
 
     }
-
-    if (carrito.length == 0) {
-
-        // Borra boton de comprar
-        $("#carrito-comprar").html(``);
-
-        // Imprime mensaje
-        $("#carrito-section__grid").html(
-            `<div class="carrito__vacio">
-        <p><b>NO TIENES PRODUCTOS EN EL CARRITO.</b></p>
-        </div>`);
-    }
-

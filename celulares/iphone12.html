@@ -40,7 +40,7 @@
         <li class="nav__item">
 
           <a href="../cuerpo/faq.html">
-            <p>FAQ </p>
+            <p>Ayuda </p>
           </a>
 
         </li>
@@ -56,20 +56,50 @@
 
   </header>
 
-
   <main class="articulo__main">
     <section class="main__section">
-      <div id="section__grid2">
+      <div class="section__grid2">
+        <div class="grid__imgSecundarias">
+          <img src="../imagenes/galaxyZ.png" class="imgSecundarias__secundaria" alt="Samsung S21">
 
+        </div>
 
-      </div>
-      <div class="datos__inputs">
-        <button type="button" class="btn btn-outline-success">Comprar</button>
-        <button type="button" class="btn btn-outline-light"> <i class="fas fa-shopping-cart" class="button__cart"
-            onclick="agregarAlCarrito();" alt="icono carrito"> Agregar al carrito </i></button>
+        <div class="grid__datos">
+          <h2>Galaxy Z Fold3 5G Negro</h2>
+          <p class="datos__precio">$254.999</p>
+
+          <div class="datos__descripcion">
+            <p>Pantalla plegable con una extensión total de "7.6"
+              y resolución de 1768px x 2208px.
+            </p>
+          </div>
+
+          <div class="datos__selects">
+            <label for="talle">Color:</label>
+            <select name="talle" id="talle" class="form-select">
+              <option value="B">Blanco</option>
+              <option value="N">Negro</option>
+              <option value="A">Azul</option>
+            </select>
+
+            <label for="cantidad">Cantidad:</label>
+            <select name="cantidad" id="cantidad" class="form-select">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+
+          <div class="datos__inputs">
+            <button type="button" class="btn btn-outline-success"> <a href=""> Comprar </a> </button>
+          </div>
+        </div>
       </div>
     </section>
   </main>
+
 
 
   <!-- Footer-->

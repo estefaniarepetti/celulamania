@@ -85,3 +85,9 @@ $("h2").css({
 
 $(".envios").prepend(`<h2 style="display: none" >¡Informacion Sobre Envios!</h2> `)
 $("h2").fadeIn();
+
+
+//como comprar //
+
+$(".como__detalle").prepend(`<h2 style="display: none" >¿Como Comprar ?</h2> `)
+$("h2").fadeIn(3000);
