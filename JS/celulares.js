@@ -51,11 +51,11 @@ const marcaCelus = [{
 
 const productos = [{
 
-    id: accesorios,
+    id: 1,
     imagen: "../imagenes/accesorio1.png"
 },
 {
-    id: accesorios,
+    id: 2,
     imagen: "../imagenes/accesorio2.png",
 }
 

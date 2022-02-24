@@ -381,9 +381,9 @@ footer a {
     margin: 1.87em;
     /* display: grid; */
     width: max-content;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: "Marca Marca Marca" "Marca Marca Marca";
+    grid-template-areas: "Marca Marca " "Marca Marca ";
     grid-column-gap: 0.625em;
     grid-row-gap: 0.625em; } }
 
@@ -887,9 +887,9 @@ label {
   border-radius: 4px; }
 
 .promo__p {
+  margin-top: 50px;
   text-align: center;
-  font-size: 160px;
-  color: red; }
+  font-size: 3rem; }
 
 .precio1 {
   font-family: Roboto-Regular,sans-serif;

@@ -61,10 +61,10 @@
     margin: 1.87em;
     /* display: grid; */
     width: max-content;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr ;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: "Marca Marca Marca"
-  "Marca Marca Marca";
+    grid-template-areas: "Marca Marca "
+    "Marca Marca ";
     grid-column-gap: 0.625em;
     grid-row-gap: 0.625em;
 } 

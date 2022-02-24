@@ -91,3 +91,7 @@ $("h2").fadeIn();
 
 $(".como__detalle").prepend(`<h2 style="display: none" >¿Como Comprar ?</h2> `)
 $("h2").fadeIn(3000);
+
+
+$(".promo").prepend(`<h2 class="promo__p" style="display: none" >Promociones</h2> `)
+$("h2").fadeIn(2000);
