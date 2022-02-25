@@ -55,3 +55,31 @@ $("#btn-enviar").click(() => {
     
 });
 
+
+/* section seguimos */ 
+
+$(".seguinos").prepend(`<h2 style="display: none" class="seguinos__texto" >¡Acorardate de seguirnos en nuestras redes!</h2> `)
+$("h2").fadeIn(4000);
+
+
+test();
+TraerDatos();
+
+const div = document.getElementById('contenedor')
+// Creamos una funcion asincrona que tenga un fetch//
+async function TraerDatos() {
+const data = await fetch ('https://api.giphy.com/v1/gifs/random?api_key=05ENoUawF2jbJGFBt2hMHUAYAmZEPLje');
+const response = await data.json(); 
+const gif = response.data;
+// creamos elemento para las imagenes//
+const img = document.createElement("img");
+img.src = gif.images.fixed_height.url;
+div.appendChild(img);
+
+console.log(response);
+return response;
+};
+
+function test (){
+  console.log('test')
+};
