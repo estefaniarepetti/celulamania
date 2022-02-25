@@ -3,7 +3,7 @@
 const marcaCelus = [{
     id: 1,
     nombre: "samsung",
-    imagen: "../imagenes/logo3.png"
+    imagen: "../imagenes/logo3.png",
     },
     {
     id:2 ,
