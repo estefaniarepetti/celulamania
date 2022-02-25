@@ -3,7 +3,7 @@ const productos = [{
     nombre: "Iphone 12",
     precio: "$132.000",
     cuotas: "6 cuotas sin interes",
-    imagen: "/imagenes/phone.png",
+    imagen: "./imagenes/phone.png",
     direccion: "../celulares/iphone12.html"
 },
 {
@@ -11,7 +11,7 @@ const productos = [{
     nombre: "Samsung Galaxy Z Fold3",
     precio: "$254.999",
     cuotas: "6 cuotas sin interes",
-    imagen: "/imagenes/galaxyZ.png",
+    imagen: "./imagenes/galaxyZ.png",
     direccion: "../celulares/samsuggalaxy.html"
 },
 {
@@ -19,7 +19,7 @@ const productos = [{
     nombre: "Motorola Moto E7i Power",
     precio: "$21.999",
     cuotas: "6 cuotas sin interes",
-    imagen: "/imagenes/celular3.png",
+    imagen: "./imagenes/celular3.png",
     direccion: "../celulares/motorola.html"
 },
 {
@@ -27,7 +27,7 @@ const productos = [{
     nombre: "Xiaomi Note 10",
     precio: "$62.999",
     cuotas: "6 cuotas sin interes",
-    imagen: "/imagenes/celular5.png",
+    imagen: "./imagenes/celular5.png",
     direccion: "../celulares/xioaminote.html"
 },
 
@@ -36,7 +36,7 @@ const productos = [{
     nombre: "Samsung A52",
     precio: "$64.999",
     cuotas: "6 cuotas sin interes",
-    imagen: "/imagenes/phone2.png",
+    imagen: "./imagenes/phone2.png",
     direccion: "../celulares/samsunga52.html"
 
 },
@@ -46,7 +46,7 @@ const productos = [{
     nombre: "One Plus Nord100",
     precio: "$59.850",
     cuotas: "6 cuotas sin interes",
-    imagen: "/imagenes/phone3.png",
+    imagen: "./imagenes/phone3.png",
     direccion: "../celulares/oneplus.html"
 },
 
