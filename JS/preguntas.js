@@ -3,7 +3,7 @@ const productos = [{
     nombre: "Iphone 12",
     precio: "$132.000",
     cuotas: "6 cuotas sin interes",
-    imagen: "./imagenes/phone.png",
+    imagen: "../imagenes/phone.png",
     direccion: "../celulares/iphone12.html"
 },
 {
