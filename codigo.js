@@ -2,7 +2,6 @@
   /* CARRITO DE COMPRAS */
 
 
-
   const addToShoppingCartButtons = document.querySelectorAll('.addToCart');
 addToShoppingCartButtons.forEach((addToCartButton) => {
   addToCartButton.addEventListener('click', addToCartClicked);
@@ -121,4 +120,40 @@ function comprarButtonClicked() {
   shoppingCartItemsContainer.innerHTML = '';
   updateShoppingCartTotal();
 }
+
+
+
+//promesas //
+
+test();
+TraerDatos();
+console.log('Hola');
+console.log('chau');
+console.log('mira esto')
+
+
+const div = document.getElementById('contenedor')
+
+/*let respuesta = TraerDatos(); */
+
+async function TraerDatos() {
+const data = await fetch ('https://api.giphy.com/v1/trending?ap1_key-e826c9fc5c929e0d6c6d423841a282aa');
+const response = await data.json();
+const gif1 = response.data[0];
+const img = document.createElement("img");
+img.src = gif1.images.fixed_height.url;
+div.appendChild(img);
+/*
+response.forEach(element => {
+ div.innerHTML += element.nombre;
+}); 
+*/
+
+console.log(gif1);
+return response;
+};
+
+function test (){
+  console.log('test')
+};
 
